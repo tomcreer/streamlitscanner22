@@ -460,8 +460,8 @@ def plotsir(add_text, description):
   if smoothing:
     #df3 = df3.sort_values(['cumlength'])
     #df4 = df4.sort_values(['cumlength'])
-    ax.plot(df3['cumlength'], df3[add_text].rolling(smoothing).mean(), color='b', label='Left lane')
-    ax.plot(df4['cumlength'], df4[add_text].rolling(smoothing).mean(), color='r', label='Right lane')
+    ax.plot(df3.sort_values(['cumlength']['cumlength'], df3.sort_values(['cumlength'][add_text].rolling(smoothing).mean(), color='b', label='Left lane')
+    ax.plot(df4.sort_values(['cumlength']['cumlength'], df4.sort_values(['cumlength'][add_text].rolling(smoothing).mean(), color='r', label='Right lane')
 
   else:
    ax.plot(df3['cumlength'], df3[add_text], color='b', label='Left lane')
