@@ -306,7 +306,7 @@ def plotDot(point,color):
                      , color=color_scale(float(point[to_plot])) #'RCIexTex'
                      #, fill_color='black'
                      , fill=True
-                     ).add_child(folium.Popup(cap).add_to(feature_group5)
+                     ).add_child(folium.Popup(cap)).add_to(feature_group5)
             
         
         
