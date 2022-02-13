@@ -300,7 +300,7 @@ def plotDot(point,color):
 
     x2,y2 = point['X1'],point['Y1']#transformer27.transform(point['X1'],point['Y1'])   
     if map_param == 'SCRIM':
-     cap = 'SFC:'+'{0:.1f}'.format(point['SFC']) + ',IL:{0:.1f}'.format(point['THRESHOLD_'])
+     cap = 'SFC:'+'{0:.2f}'.format(point['SFC']) + ',IL:{0:.2f}'.format(point['THRESHOLD_'])
         
      folium.Circle( [x2, y2], radius=size
                      , color=color_scale(float(point[to_plot])) #'RCIexTex'
