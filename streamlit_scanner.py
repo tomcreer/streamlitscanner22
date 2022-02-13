@@ -268,7 +268,7 @@ if hier in bands:
        #st.write('limits are %s , %s , %s. %s %s' %(max(0,lim1-diff/2),lim1+diff/2,lim2+diff/6, lim1, lim2))
 
    elif map_param == 'SCRIM':
-       color_scale = LinearColormap(['#91db9b','yellow','red'], index=[0.005,0.09,0.19])            
+       color_scale = LinearColormap(['#91db9b','yellow','red','maroon'], index=[0.005,0.09,0.18,0.23])            
    else:
        #df_tmp = df3[map_param].append(df4[map_param])
        if smoothing:
