@@ -65,7 +65,7 @@ def load_data():
     #df = df.apply(lambda x: reproj(x), axis=1)
 
     df_scrim = pd.read_parquet('scrim.parquet')
-    #df = df.sort_values(['SECTIONLABEL','LABEL','STARTCH'])
+    df = df.sort_values(['SECTIONLABEL','LABEL','STARTCH'])
     
     #gdf = gpd.GeoDataFrame(
     #df, geometry=gpd.points_from_xy(df.Y1, df.X1))
