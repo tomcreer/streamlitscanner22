@@ -456,9 +456,10 @@ def plotsir(add_text, description):
   f, ax = plt.subplots(1,1,figsize=(12,4))
   #df3.plot(kind='line',x='cumlength',y='LV3',ax=ax)
   
-  df3 = df3.sort_values(['cumlength'])
-  df4 = df4.sort_values(['cumlength'])
+
   if smoothing:
+    df3 = df3.sort_values(['cumlength'])
+    df4 = df4.sort_values(['cumlength'])
     ax.plot(df3['cumlength'], df3[add_text].rolling(smoothing).mean(), color='b', label='Left lane')
     ax.plot(df4['cumlength'], df4[add_text].rolling(smoothing).mean(), color='r', label='Right lane')
 
