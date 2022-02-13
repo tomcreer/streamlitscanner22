@@ -298,8 +298,18 @@ def plotDot(point,color):
             to_plot = map_param
             
 
-    x2,y2 = point['X1'],point['Y1']#transformer27.transform(point['X1'],point['Y1'])    
-    folium.Circle( [x2, y2], radius=size
+    x2,y2 = point['X1'],point['Y1']#transformer27.transform(point['X1'],point['Y1'])   
+    if map_param == 'SCRIM':
+     folium.Circle( [x2, y2], radius=size
+                     , color=color_scale(float(point[to_plot])) #'RCIexTex'
+                     #, fill_color='black'
+                     , fill=True
+                     ).add_child(folium.Popup('SFC:%s,IL:%s' % (point['SFC'],point['THRESHOLD1']))).add_to(feature_group5)
+            
+        
+        
+    else:
+     folium.Circle( [x2, y2], radius=size
                      , color=color_scale(float(point[to_plot])) #'RCIexTex'
                      #, fill_color='black'
                      , fill=True
