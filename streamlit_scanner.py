@@ -464,8 +464,8 @@ def plotsir(add_text, description):
     ax.plot(df4.sort_values(['cumlength'])['cumlength'], df4.sort_values(['cumlength'])[add_text].rolling(smoothing).mean(), color='r', label='Right lane')
 
   else:
-   ax.plot(df3['cumlength'], df3[add_text], color='b', label='Left lane')
-   ax.plot(df4['cumlength'], df4[add_text], color='r', label='Right lane')      
+   ax.plot(df3.sort_values(['cumlength'])['cumlength'], df3.sort_values(['cumlength'])[add_text], color='b', label='Left lane')
+   ax.plot(df4.sort_values(['cumlength'])['cumlength'], df4.sort_values(['cumlength'])[add_text], color='r', label='Right lane')      
   #ax.plot(t, I, 'y', label='Right lane')
   #ax.plot(t, R, 'g', alpha=0.7, linewidth=2, label='Radius')
 
